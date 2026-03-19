@@ -48,4 +48,5 @@ async def to_code(config):
 
     esphome_version = parse_esphome_version()
     if esphome_version >= (2025, 12, 0):
+    if hasattr(uart, "request_wake_loop_on_rx"):
         uart.request_wake_loop_on_rx()
